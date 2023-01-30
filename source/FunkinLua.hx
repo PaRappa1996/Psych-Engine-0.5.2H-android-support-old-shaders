@@ -24,10 +24,13 @@ import flixel.FlxObject;
 import flixel.FlxSprite;
 import openfl.Lib;
 import openfl.display.BlendMode;
+import openfl.display.ShaderParameter;
 import openfl.filters.BitmapFilter;
-import openfl.utils.Assets;
+import openfl.filters.ShaderFilter;
+import openfl.utils.Assets as OpenFlAssets;
 import flixel.math.FlxMath;
 import flixel.util.FlxSave;
+import Shaders;
 import flixel.addons.transition.FlxTransitionableState;
 #if sys
 import sys.FileSystem;
@@ -36,8 +39,6 @@ import sys.io.File;
 import Type.ValueType;
 import Controls;
 import DialogueBoxPsych;
-
-import Shaders;
 
 #if desktop
 import Discord;
@@ -1811,7 +1812,7 @@ class FunkinLua {
 			PlayState.instance.addShaderToCamera(camera, new TiltshiftEffect(blurAmount,center));
 			
 		});
-	Lua_helper.add_callback(lua, "addVCREffect", function(camera:String,glitchFactor:Float = 0.0,distortion:Bool=true,perspectiveOn:Bool=true,vignetteMoving:Bool=true) {
+	        Lua_helper.add_callback(lua, "addVCREffect", function(camera:String,glitchFactor:Float = 0.0,distortion:Bool=true,perspectiveOn:Bool=true,vignetteMoving:Bool=true) {
 			
 			PlayState.instance.addShaderToCamera(camera, new VCRDistortionEffect(glitchFactor,distortion,perspectiveOn,vignetteMoving));
 			
