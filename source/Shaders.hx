@@ -837,7 +837,7 @@ class PulseEffect extends Effect
 		this.waveAmplitude = waveAmplitude;
 		shader.uTime.value = [0];
 		shader.uampmul.value = [1];
-		shader.uEnabled.value = [false];
+		//shader.uEnabled.value = [false];
 		PlayState.instance.shaderUpdates.push(update);
 	}
 
