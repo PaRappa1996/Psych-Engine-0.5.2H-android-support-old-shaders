@@ -38,7 +38,7 @@ jobs:
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
-          haxelib install hxcpp > /dev/null
+          haxelib install hxcpp 4.2.1 --quiet
           haxelib install lime
           haxelib install openfl
           haxelib --never install flixel
@@ -48,7 +48,8 @@ jobs:
           haxelib install flixel-addons
           haxelib git linc_luajit https://github.com/sirox228/linc_luajit.git
           haxelib git extension-androidtools https://github.com/PaRappa1996/extension-androidtools.git
-          haxelib git extension-videoview https://github.com/MAJigsaw77/extension-videoview.git
+          haxelib git extension-videoview https://github.com/mcagabe19-stuff/extension-videoview.git
+          haxelib set hxcpp 4.2.1
           haxelib list
 
       - name: Setup Lime
@@ -103,7 +104,7 @@ jobs:
       - name: Install Haxelib
         run: |
           haxelib setup ~/haxelib
-          haxelib install hxcpp > /dev/null
+          haxelib install hxcpp 4.2.1 --quiet
           haxelib install lime
           haxelib install openfl
           haxelib --never install flixel
@@ -113,7 +114,8 @@ jobs:
           haxelib install flixel-addons
           haxelib git linc_luajit https://github.com/sirox228/linc_luajit.git
           haxelib git extension-androidtools https://github.com/PaRappa1996/extension-androidtools.git
-          haxelib git extension-videoview https://github.com/MAJigsaw77/extension-videoview.git
+          haxelib git extension-videoview https://github.com/mcagabe19-stuff/extension-videoview.git
+          haxelib set hxcpp 4.2.1
           haxelib list
 
       - name: Setup Lime
